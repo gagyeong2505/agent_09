@@ -15,13 +15,21 @@
 agent_09/
 ├── CLAUDE.md      # 프로젝트 규칙 (이 파일)
 ├── .gitignore     # Office 잠금 파일(~$*)과 OS 임시 파일 제외
+├── .claude/
+│   └── skills/
+│       └── mk-ppt/    # 이 프로젝트 전용 스킬: python-pptx로 .pptx 발표 자료 생성
+│           ├── SKILL.md
+│           ├── references/python_pptx_api.md
+│           └── scripts/build_pptx.py
 ├── research/      # 자료조사 결과 .md (영어)
 ├── report/        # 최종 보고서 .docx (한글)
+├── slides/        # 발표 자료 .pptx (한글), mk-ppt 스킬로 생성
 └── translate/     # 모든 .md의 한글 번역본 (같은 상대 경로)
 ```
 
 - 자료조사 결과(`.md`)는 `research/`에 저장합니다.
 - 보고서(`.docx`)는 `report/`에 저장합니다. 산출물을 프로젝트 루트에 두지 않습니다.
+- 발표 자료(`.pptx`)는 `mk-ppt` 스킬(`.claude/skills/mk-ppt/`)을 사용해 `slides/`에 저장합니다.
 - 사용자가 요청하지 않는 한 기존 산출물을 덮어쓰지 않습니다. 대신 `_v2`, `_v3`, … 처럼 접미사를 붙인 새 버전을 만듭니다(예: `ai_development_research_v2.md`, `AI_발전_보고서_v2.docx`).
 
 ## 작업 방식
