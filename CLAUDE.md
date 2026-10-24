@@ -14,7 +14,7 @@ This is a research-and-report workspace, not a code project.
 ```
 agent_09/
 ├── CLAUDE.md      # Project rules (this file)
-├── .gitignore     # Ignores Office lock files (~$*) and OS junk
+├── .gitignore     # Ignores Office lock files (~$*), OS junk and .playwright-mcp/
 ├── .claude/
 │   ├── rules/
 │   │   └── ppt-rule-v1/   # Always-loaded rules for building .pptx decks
@@ -28,6 +28,7 @@ agent_09/
 │   └── ppt/
 │       └── slide-design-system.md   # Orange slide design system (colors, fonts, layout)
 ├── research/      # Research findings as .md (English)
+│   └── images/    # Images collected for research/posts (one subfolder per topic, e.g. naver_blog_ai_agent/)
 ├── report/        # Final reports as .docx (Korean)
 ├── slides/        # Presentations as .pptx (Korean), built with the mk-ppt skill
 └── translate/     # Korean translations of every .md, mirroring relative paths

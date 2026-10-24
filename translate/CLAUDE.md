@@ -14,7 +14,7 @@
 ```
 agent_09/
 ├── CLAUDE.md      # 프로젝트 규칙 (이 파일)
-├── .gitignore     # Office 잠금 파일(~$*)과 OS 임시 파일 제외
+├── .gitignore     # Office 잠금 파일(~$*), OS 임시 파일, .playwright-mcp/ 제외
 ├── .claude/
 │   ├── rules/
 │   │   └── ppt-rule-v1/   # .pptx 제작 시 항상 로드되는 규칙
@@ -28,6 +28,7 @@ agent_09/
 │   └── ppt/
 │       └── slide-design-system.md   # 오렌지 슬라이드 디자인 시스템 (색상, 폰트, 레이아웃)
 ├── research/      # 자료조사 결과 .md (영어)
+│   └── images/    # 조사·포스팅용 이미지 (주제별 하위 폴더, 예: naver_blog_ai_agent/)
 ├── report/        # 최종 보고서 .docx (한글)
 ├── slides/        # 발표 자료 .pptx (한글), mk-ppt 스킬로 생성
 └── translate/     # 모든 .md의 한글 번역본 (같은 상대 경로)
