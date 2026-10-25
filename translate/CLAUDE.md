@@ -17,6 +17,8 @@ agent_09/
 ├── .gitignore     # Office 잠금 파일(~$*), OS 임시 파일, .playwright-mcp/ 제외
 ├── .claude/
 │   ├── rules/
+│   │   ├── browser-rule-v1/   # 브라우저 제어(Playwright MCP) 시 항상 로드되는 규칙
+│   │   │   └── browser-rule-v1.md
 │   │   └── ppt-rule-v1/   # .pptx 제작 시 항상 로드되는 규칙
 │   │       └── ppt-rule-v1.md
 │   └── skills/
@@ -28,7 +30,9 @@ agent_09/
 │   └── ppt/
 │       └── slide-design-system.md   # 오렌지 슬라이드 디자인 시스템 (색상, 폰트, 레이아웃)
 ├── research/      # 자료조사 결과 .md (영어)
+│   ├── camping_cardnews/   # 캠핑 카드뉴스 기획안 .md (기획안당 8장, 1장 = 썸네일)
 │   └── images/    # 조사·포스팅용 이미지 (주제별 하위 폴더, 예: naver_blog_ai_agent/)
+│       └── camping_cardnews/   # AI로 생성한 카드뉴스 이미지 (Higgsfield), 예: 썸네일
 ├── report/        # 최종 보고서 .docx (한글)
 ├── slides/        # 발표 자료 .pptx (한글), mk-ppt 스킬로 생성
 └── translate/     # 모든 .md의 한글 번역본 (같은 상대 경로)
@@ -38,6 +42,7 @@ agent_09/
 - 보고서(`.docx`)는 `report/`에 저장합니다. 산출물을 프로젝트 루트에 두지 않습니다.
 - 발표 자료(`.pptx`)는 `mk-ppt` 스킬(`.claude/skills/mk-ppt/`)을 사용해 `slides/`에 저장합니다.
 - `.pptx` 작업에는 `.claude/rules/ppt-rule-v1/ppt-rule-v1.md`를 가장 먼저 적용합니다. 우선순위: ppt-rule-v1 → 사용자의 디자인 `.md` → `mk-ppt` 기본값.
+- 브라우저 제어 작업에는 `.claude/rules/browser-rule-v1/browser-rule-v1.md`를 따릅니다(Playwright MCP: 트리거 키워드가 있으면 자동 호출, 없으면 먼저 동의 확인).
 - 사용자가 요청하지 않는 한 기존 산출물을 덮어쓰지 않습니다. 대신 `_v2`, `_v3`, … 처럼 접미사를 붙인 새 버전을 만듭니다(예: `ai_development_research_v2.md`, `AI_발전_보고서_v2.docx`).
 
 ## 작업 방식
@@ -53,5 +58,5 @@ agent_09/
 ## 마크다운 파일 정책
 
 - 지금부터 작성되는 모든 `.md` 파일은 영어로 작성합니다.
-- 모든 `.md` 파일에 대해 `c:\Users\SBS\agent1004\agent_09\translate`에 동일한 상대 경로/파일명으로 한글 번역본을 저장합니다(예: `research/x.md` → `translate/research/x.md`). 번역본은 원본과 동시에 만듭니다.
+- 모든 `.md` 파일에 대해 `c:\Users\SBS\agent_1025\agent_09\translate`에 동일한 상대 경로/파일명으로 한글 번역본을 저장합니다(예: `research/x.md` → `translate/research/x.md`). 번역본은 원본과 동시에 만듭니다.
 - `.md` 파일이 수정되거나 삭제될 때마다 변경 사항을 확인하여 `translate`에 있는 대응 번역 파일에도 동일하게 수정(또는 삭제)을 반영하여 두 파일을 동기화합니다.

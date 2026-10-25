@@ -17,6 +17,8 @@ agent_09/
 ├── .gitignore     # Ignores Office lock files (~$*), OS junk and .playwright-mcp/
 ├── .claude/
 │   ├── rules/
+│   │   ├── browser-rule-v1/   # Always-loaded rules for browser control (Playwright MCP)
+│   │   │   └── browser-rule-v1.md
 │   │   └── ppt-rule-v1/   # Always-loaded rules for building .pptx decks
 │   │       └── ppt-rule-v1.md
 │   └── skills/
@@ -28,7 +30,9 @@ agent_09/
 │   └── ppt/
 │       └── slide-design-system.md   # Orange slide design system (colors, fonts, layout)
 ├── research/      # Research findings as .md (English)
+│   ├── camping_cardnews/   # Card news plans (.md, 8 cards each, card 1 = thumbnail) on camping
 │   └── images/    # Images collected for research/posts (one subfolder per topic, e.g. naver_blog_ai_agent/)
+│       └── camping_cardnews/   # AI-generated card news images (Higgsfield), e.g. thumbnails
 ├── report/        # Final reports as .docx (Korean)
 ├── slides/        # Presentations as .pptx (Korean), built with the mk-ppt skill
 └── translate/     # Korean translations of every .md, mirroring relative paths
@@ -38,6 +42,7 @@ agent_09/
 - Save reports (`.docx`) in `report/`. Do not leave deliverables in the project root.
 - Save presentations (`.pptx`) in `slides/`, using the `mk-ppt` skill (`.claude/skills/mk-ppt/`).
 - For any `.pptx` work, apply `.claude/rules/ppt-rule-v1/ppt-rule-v1.md` first. Priority: ppt-rule-v1 → the user's design `.md` → `mk-ppt` defaults.
+- For any browser-control work, follow `.claude/rules/browser-rule-v1/browser-rule-v1.md` (Playwright MCP: automatic on trigger keywords, consent first otherwise).
 - Never overwrite an existing deliverable unless the user asks. Create a new version with a `_v2`, `_v3`, … suffix instead (e.g. `ai_development_research_v2.md`, `AI_발전_보고서_v2.docx`).
 
 ## Workflow
@@ -53,5 +58,5 @@ agent_09/
 ## Markdown File Policy
 
 - All `.md` files created from now on must be written in English.
-- For every `.md` file, save a Korean translation at `c:\Users\SBS\agent1004\agent_09\translate`, mirroring the same relative path/filename (e.g. `research/x.md` → `translate/research/x.md`). Create the translation at the same time as the original.
+- For every `.md` file, save a Korean translation at `c:\Users\SBS\agent_1025\agent_09\translate`, mirroring the same relative path/filename (e.g. `research/x.md` → `translate/research/x.md`). Create the translation at the same time as the original.
 - Whenever a `.md` file is modified or deleted, check for the change and apply the same update (or deletion) to its corresponding translation file in `translate`, keeping both in sync.
