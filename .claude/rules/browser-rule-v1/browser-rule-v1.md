@@ -32,4 +32,4 @@ These rules apply whenever a task in this project could involve opening or contr
 - Even when the task started from a trigger keyword, confirm again right before any hard-to-reverse or outward-facing action: payments, posting, sending messages or email, deleting, submitting forms.
 - Never type passwords or other credentials yourself; let the user enter them in the browser.
 - Close the browser (`browser_close`) when the work is finished.
-- Save screenshots and collected files in the right purpose-based folder (e.g. `research/images/<topic>/`), not in the project root. The `.playwright-mcp/` folder is git-ignored and is for temporary output only.
+- Save screenshots and collected files in the `img/` folder of the current task folder (e.g. `output/blog/<task_name>/img/`, `output/research/<task_name>/img/`), not in the project root or a shared `images/` folder. The `.playwright-mcp/` folder is git-ignored and is for temporary output only.

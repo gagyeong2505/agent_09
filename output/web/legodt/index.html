@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEGODT 레고트 — Play My Way | 루프 텀블러 브랜드 소개 (비공식)</title>
+  <meta name="description" content="컬러풀 라이프스타일 브랜드 LEGODT(레고트)의 루프 텀블러, 텀꾸(TUMGGU), 모듈 텀블러, 컬러, 팝업 이야기를 정리한 비공식 브랜드 소개 페이지입니다.">
+  <meta name="theme-color" content="#EC4FA4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='20' r='12' fill='none' stroke='%23EC4FA4' stroke-width='6'/%3E%3Crect x='16' y='30' width='32' height='30' rx='8' fill='%23141414'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;900&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <!-- Reusable tumbler drawing (colors via CSS custom properties) -->
+  <svg width="0" height="0" class="sr-defs" aria-hidden="true" focusable="false">
+    <symbol id="tumbler" viewBox="0 0 120 220">
+      <circle cx="60" cy="32" r="22" fill="none" stroke="var(--t-loop, #141414)" stroke-width="10"/>
+      <rect x="22" y="50" width="76" height="30" rx="10" fill="var(--t-lid, #141414)"/>
+      <rect x="26" y="76" width="68" height="134" rx="14" fill="var(--t-body, #A8E3CF)"/>
+      <rect x="26" y="166" width="68" height="44" rx="12" fill="var(--t-sleeve, #F07DB2)"/>
+      <rect x="34" y="88" width="7" height="62" rx="3.5" fill="#fff" opacity=".4"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="주요 메뉴">
+      <a class="nav__logo" href="#top" aria-label="LEGODT 레고트 처음으로">LEGODT</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="sr-only">메뉴 열기</span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#loop">Loop</a></li>
+        <li><a href="#lineup">Lineup</a></li>
+        <li><a href="#make">Make</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#popups">Pop-ups</a></li>
+        <li><a href="#buy">Buy</a></li>
+        <li><a href="#care">Care</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 class="wordmark" id="hero-title">
+          <span class="wordmark__letters" aria-hidden="true"><span>L</span><span>E</span><span>G</span><span class="wordmark__o">O</span><span>D</span><span>T</span></span>
+          <span class="sr-only">LEGODT 레고트</span>
+        </h1>
+        <div class="hero__card">
+          <figure class="hero__media">
+            <img src="img/hero-tumbler-yellow.jpg" width="1200" height="799" alt="노란 배경 앞에서 손에 든 꽃무늬 텀블러 (일반 이미지, LEGODT 제품 아님)">
+          </figure>
+          <div class="hero__panel">
+            <p class="hero__kicker">레고트 루프 텀블러</p>
+            <p class="hero__title">Play My Way,<br>TUMGGU</p>
+            <p class="hero__text">컬러를 고르고, 슬리브를 바꾸고, 키링을 달고. 매일 드는 텀블러로 나를 표현하는 컬러풀 라이프스타일 브랜드.</p>
+            <a class="btn btn--white" href="#make">Make Your Own <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="stickers" aria-label="움직여 볼 수 있는 스티커 태그">
+            <button type="button" class="sticker sticker--butter" style="--x:4%;--y:8%;--r:-8deg;--d:0s">Play My Way</button>
+            <button type="button" class="sticker sticker--mint" style="--x:33%;--y:80%;--r:6deg;--d:.6s">Mix &amp; Match</button>
+            <button type="button" class="sticker sticker--lav" style="--x:62%;--y:4%;--r:-4deg;--d:1.2s">28 Parts</button>
+            <button type="button" class="sticker sticker--pink" style="--x:86%;--y:86%;--r:9deg;--d:.3s">텀꾸</button>
+            <button type="button" class="sticker sticker--sky" style="--x:8%;--y:82%;--r:4deg;--d:.9s">Loop</button>
+          </div>
+        </div>
+        <p class="hero__hint">스티커는 드래그(또는 포커스 후 방향키)로 옮길 수 있어요.</p>
+      </div>
+    </section>
+
+    <!-- 2. BRAND STORY -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container story__inner">
+        <p class="eyebrow">Brand Story</p>
+        <h2 class="section-title" id="story-title">Born to Play</h2>
+        <p class="statement reveal">일상의 물건으로<br><em>나를 표현하는</em><br>컬러풀 라이프스타일 브랜드</p>
+        <figure class="float-card float-card--a" data-parallax="0.12">
+          <img src="img/story-pink-glass.jpg" width="800" height="1000" loading="lazy" alt="밝은 바닥 위에 그림자를 드리운 분홍색 유리컵 (일반 이미지)">
+        </figure>
+        <figure class="float-card float-card--b" data-parallax="-0.1">
+          <img src="img/story-two-tumblers.jpg" width="800" height="1200" loading="lazy" alt="모래색 배경 위의 빨간색과 파란색 텀블러 (일반 이미지)">
+        </figure>
+        <div class="story__body reveal">
+          <p>LEGODT(레고트)는 세라믹·테이블웨어 브랜드 <strong>오덴세(Odense)</strong>에서 출발한 컨템포러리 라이프스타일 브랜드입니다. 29CM 브랜드 소개에 따르면 레고트는 “일상의 단조로움을 깨는 유쾌하고 위트 있는 제품”, “일상 속 물건으로 개성을 표현하게 하는 직관적이고 다채로운 디자인”을 지향합니다.</p>
+          <p>CJ 뉴스룸 인터뷰에서는 레고트의 제품 아이디어가 <strong>“나무 토막을 가지고 노는 북유럽 아이들의 모습”</strong>에서 출발했다고 소개합니다. 레고트와 오덴세는 CJ ENM의 브랜드 사업 자회사 <strong>브랜드웍스코리아</strong>가 운영합니다.</p>
+          <p class="note">※ ‘LEGODT’라는 이름의 뜻을 설명한 공식 자료는 확인되지 않았습니다. 레고트는 LEGO와 관련이 없는 한국 브랜드입니다.</p>
+        </div>
+        <ul class="facts reveal" aria-label="브랜드 연표 요약">
+          <li><span class="facts__k">2013</span><span class="facts__v">오덴세, CJ 홈쇼핑으로 첫 런칭</span></li>
+          <li><span class="facts__k">2023.01.02</span><span class="facts__v">브랜드웍스코리아(CJ ENM 자회사) 출범</span></li>
+          <li><span class="facts__k">2023.03</span><span class="facts__v">‘오덴세 레고트 루프 텀블러 400ml’ 확인된 가장 이른 등록(다나와)</span></li>
+          <li><span class="facts__k">2026</span><span class="facts__v">28개 파츠 모듈 텀블러 출시</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. SIGNATURE LOOP -->
+    <section class="section loop" id="loop" aria-labelledby="loop-title">
+      <div class="container">
+        <p class="eyebrow">Signature</p>
+        <h2 class="section-title" id="loop-title">The Loop</h2>
+        <p class="section-lead">뚜껑 위의 커다란 고리, ‘루프’가 레고트 텀블러의 이름이자 시그니처입니다.</p>
+        <ul class="shapes">
+          <li class="shape shape--circle reveal">
+            <svg class="shape__icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="18" r="11" fill="none" stroke="currentColor" stroke-width="5"/><rect x="10" y="29" width="28" height="12" rx="5" fill="currentColor"/></svg>
+            <h3>루프 핸들</h3>
+            <p>뚜껑 일체형 넓은 고리. 그립 지름 스탠다드 50mm 이상, 멀티 1000ml 80mm 이상(180° 회전).</p>
+          </li>
+          <li class="shape shape--capsule reveal">
+            <svg class="shape__icon" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="14" rx="16" ry="6" fill="none" stroke="currentColor" stroke-width="4"/><path d="M8 14v20c0 4 7 7 16 7s16-3 16-7V14" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+            <h3>와이드 입구</h3>
+            <p>입구 지름 77mm(스탠다드 400ml) · 90mm(멀티 1000ml). 얼음, 요거트, 아이스크림도 쏙.</p>
+          </li>
+          <li class="shape shape--square reveal">
+            <svg class="shape__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="6" width="30" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="4"/><rect x="16" y="13" width="16" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 3"/></svg>
+            <h3>이중 진공 단열</h3>
+            <p>304 스테인리스 이중벽 진공 구조, 외부 분체 도장(파우더 코팅).</p>
+          </li>
+          <li class="shape shape--tilt reveal">
+            <svg class="shape__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="6" width="24" height="36" rx="7" fill="none" stroke="currentColor" stroke-width="4"/><rect x="12" y="28" width="24" height="14" rx="5" fill="currentColor"/></svg>
+            <h3>바꿔 끼우는 슬리브</h3>
+            <p>내열 실리콘 슬리브를 다른 컬러와 믹스 &amp; 매치.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. LINEUP -->
+    <section class="section lineup" id="lineup" aria-labelledby="lineup-title">
+      <div class="container">
+        <div class="lineup__head">
+          <div>
+            <p class="eyebrow">Lineup</p>
+            <h2 class="section-title" id="lineup-title">Pick Your Loop</h2>
+          </div>
+          <div class="carousel-btns">
+            <button type="button" class="round-btn" data-scroll="-1" aria-label="이전 제품 보기">←</button>
+            <button type="button" class="round-btn" data-scroll="1" aria-label="다음 제품 보기">→</button>
+          </div>
+        </div>
+        <p class="section-lead">가격은 공식 스토어 2026-11-01 기준 판매가 / 정가(원)이며 수시로 바뀝니다. 보냉·보온 수치는 <strong>제조사 자체 테스트 기준</strong>입니다.</p>
+      </div>
+      <ul class="lineup__track" tabindex="0" aria-label="루프 텀블러 라인업 (가로 스크롤)">
+        <li class="capsule" style="--cap:#F7F1E3;--t-loop:#C8307F;--t-lid:#E2443A;--t-body:#F7F1E3;--t-sleeve:#E2443A">
+          <svg class="capsule__art capsule__art--s" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 미니</h3>
+          <p class="capsule__ml">200ml</p>
+          <p>크리스마스 에디션으로 선보인 작은 사이즈.</p>
+          <p class="capsule__price">29,000</p>
+        </li>
+        <li class="capsule" style="--cap:#F59C8B;--t-loop:#141414;--t-lid:#F7F1E3;--t-body:#F59C8B;--t-sleeve:#F7E77D">
+          <svg class="capsule__art capsule__art--m" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 스탠다드</h3>
+          <p class="capsule__ml">400ml</p>
+          <p>실리콘 패킹 스크류 뚜껑, 77mm 입구. 7.7×7.7×20cm, 240g.</p>
+          <p class="capsule__price">30,000 <s>38,000</s></p>
+        </li>
+        <li class="capsule" style="--cap:#F4DB86;--t-loop:#EC4FA4;--t-lid:#A8E3CF;--t-body:#C9B8F2;--t-sleeve:#F59C8B">
+          <span class="capsule__badge">NEW 2026</span>
+          <svg class="capsule__art capsule__art--m" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 모듈</h3>
+          <p class="capsule__ml">414ml</p>
+          <p>핸들·뚜껑·바디·슬리브를 조합하는 총 28개 파츠. 모듈 뚜껑 별도 판매(9,000 / 10,000).</p>
+          <p class="capsule__price">36,000 <s>42,000</s></p>
+        </li>
+        <li class="capsule" style="--cap:#C9B8F2;--t-loop:#24345F;--t-lid:#F7F1E3;--t-body:#C9B8F2;--t-sleeve:#24345F">
+          <svg class="capsule__art capsule__art--l" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 멀티</h3>
+          <p class="capsule__ml">400 · 600 · 1000ml</p>
+          <p>이지스냅 멀티캡(직접 음용/빨대), 빨대·세척솔 포함. 1000ml: 90mm 입구, 최대 보냉 45시간·보온 5시간*.</p>
+          <p class="capsule__price">600ml 37,000 <s>45,000</s><br>1000ml 42,000 <s>52,000</s></p>
+        </li>
+        <li class="capsule" style="--cap:#AFD3F4;--t-loop:#F07DB2;--t-lid:#F07DB2;--t-body:#AFD3F4;--t-sleeve:#F7F1E3">
+          <svg class="capsule__art capsule__art--l" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 핸디</h3>
+          <p class="capsule__ml">700 · 1000ml</p>
+          <p>그라데이션 핑크 등 그라데이션 컬러를 포함한 다양한 컬러.</p>
+          <p class="capsule__price">700ml 35,000 <s>43,000</s><br>1000ml 42,000 <s>52,000</s></p>
+        </li>
+        <li class="capsule" style="--cap:#A8E3CF;--t-loop:#141414;--t-lid:#F4DB86;--t-body:#A8E3CF;--t-sleeve:#F4DB86">
+          <svg class="capsule__art capsule__art--m" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>루프 텀블러 트라이탄</h3>
+          <p class="capsule__ml">532ml</p>
+          <p>플라스틱 버전. 바디 PCTG, 뚜껑 PP, 고무 패킹·슬리브. 29CM 판매(출시 시기 미확인).</p>
+          <p class="capsule__price capsule__price--tbd">가격: 판매처에서 확인</p>
+        </li>
+        <li class="capsule" style="--cap:#F7E77D;--t-loop:#141414;--t-lid:#141414;--t-body:#F7E77D;--t-sleeve:#F2571C">
+          <svg class="capsule__art capsule__art--m" aria-hidden="true"><use href="#tumbler"/></svg>
+          <h3>투웨이 루프 텀블러</h3>
+          <p class="capsule__ml">450 · 720ml</p>
+          <p>스크류 뚜껑 + 클립형 마우스피스, 304 스테인리스 + 세라믹 코팅 내부. 오덴세 판매 모델.</p>
+          <p class="capsule__price capsule__price--tbd">가격: 판매처에서 확인</p>
+        </li>
+      </ul>
+      <div class="container">
+        <p class="note">* 멀티 1000ml 수치는 공식 상품 페이지의 제조사 자체 테스트 기준이며, 사용 환경에 따라 달라집니다. 일본 팝업 보도자료는 “냉·온 6시간 유지”로 소개하는 등 출처마다 수치 범위가 다릅니다. 스탠다드 400ml 페이지의 “보냉 20시간·보온 3시간” 표기는 멀티 섹션에 있어 해당 모델 적용 여부가 확인되지 않아 표기하지 않았습니다.</p>
+      </div>
+    </section>
+
+    <!-- 5. MAKE YOUR OWN -->
+    <section class="section make" id="make" aria-labelledby="make-title">
+      <div class="container">
+        <p class="eyebrow eyebrow--ink">Make Your Own · TUMGGU</p>
+        <h2 class="section-title section-title--ink" id="make-title">What's Your Tumbler?</h2>
+        <p class="section-lead section-lead--ink">텀꾸(TUMGGU) = 텀블러 + 꾸미기. 파츠 컬러를 골라 나만의 루프 텀블러를 만들어 보세요. (화면용 예시이며 실제 판매 조합과 다를 수 있어요.)</p>
+        <div class="maker">
+          <div class="maker__stage" id="maker-stage">
+            <svg class="maker__svg" viewBox="0 0 240 420" role="img" aria-labelledby="maker-svg-title">
+              <title id="maker-svg-title">내가 고른 컬러의 루프 텀블러 그림</title>
+              <defs>
+                <linearGradient id="grad-pink" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FFE3EF"/>
+                  <stop offset="1" stop-color="#F07DB2"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="120" cy="404" rx="78" ry="10" fill="#141414" opacity=".12"/>
+              <circle cx="120" cy="64" r="44" fill="none" stroke="#141414" stroke-width="24"/>
+              <circle class="part" id="part-loop" cx="120" cy="64" r="44" fill="none" stroke="#EC4FA4" stroke-width="18"/>
+              <rect class="part part--outlined" id="part-lid" x="44" y="98" width="152" height="58" rx="20" fill="#F7F1E3"/>
+              <rect class="part part--outlined" id="part-body" x="52" y="148" width="136" height="252" rx="28" fill="#A8E3CF"/>
+              <rect class="part part--outlined" id="part-sleeve" x="52" y="318" width="136" height="82" rx="24" fill="#C9B8F2"/>
+              <rect x="68" y="170" width="14" height="118" rx="7" fill="#fff" opacity=".4"/>
+            </svg>
+            <div class="maker__stickers" aria-label="텀블러에 붙여볼 스티커">
+              <button type="button" class="sticker sticker--pink" style="--x:4%;--y:10%;--r:-10deg">♥ 하트</button>
+              <button type="button" class="sticker sticker--butter" style="--x:70%;--y:14%;--r:8deg">키링</button>
+              <button type="button" class="sticker sticker--sky" style="--x:6%;--y:72%;--r:6deg">이니셜 A</button>
+              <button type="button" class="sticker sticker--mint" style="--x:68%;--y:76%;--r:-6deg">텀꾸</button>
+            </div>
+            <p class="maker__live" id="maker-live" aria-live="polite"></p>
+          </div>
+          <div class="maker__controls">
+            <fieldset class="swatch-row" data-part="loop">
+              <legend>루프 핸들</legend>
+              <div class="swatches"></div>
+            </fieldset>
+            <fieldset class="swatch-row" data-part="lid">
+              <legend>뚜껑</legend>
+              <div class="swatches"></div>
+            </fieldset>
+            <fieldset class="swatch-row" data-part="body">
+              <legend>바디</legend>
+              <div class="swatches"></div>
+            </fieldset>
+            <fieldset class="swatch-row" data-part="sleeve">
+              <legend>슬리브</legend>
+              <div class="swatches"></div>
+            </fieldset>
+            <button type="button" class="btn btn--ink" id="maker-random">Random Mix <span aria-hidden="true">✦</span></button>
+            <ul class="counters">
+              <li><span class="counter" data-count="28">28</span><span>모듈 텀블러 파츠 수 (2026)</span></li>
+              <li><span class="counter" data-count="180" data-suffix="+">180+</span><span>2024 무신사 팝업 꾸미기 조합</span></li>
+            </ul>
+            <p class="maker__acc">텀꾸 액세서리: 키링(토끼·하트·아크릴·이니셜), 스티커, 스트랩, 스트링·PVC 백, 한정 ‘텀꾸 키트’ 등.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COLOR PALETTE -->
+    <section class="section colors" id="colors" aria-labelledby="colors-title">
+      <div class="container">
+        <p class="eyebrow">Color Palette</p>
+        <h2 class="section-title" id="colors-title">Color Your Day</h2>
+        <p class="section-lead">공식 스토어에서 볼 수 있는 컬러 이름들입니다. 타일을 누르면 위 텀블러의 바디 색이 바뀝니다. HEX 값은 화면 표현을 위한 근사값이며 공식 색상 값이 아닙니다.</p>
+      </div>
+      <ul class="tiles" id="color-tiles"></ul>
+    </section>
+
+    <!-- 7. COLLABS & POP-UPS -->
+    <section class="section popups" id="popups" aria-labelledby="popups-title">
+      <div class="container">
+        <p class="eyebrow">Collabs &amp; Pop-ups</p>
+        <h2 class="section-title" id="popups-title">Be Your Playground</h2>
+        <div class="timeline">
+          <div class="timeline__year" aria-hidden="true"><span id="tl-year">2024</span></div>
+          <ol class="timeline__list">
+            <li class="tl-card reveal" data-year="2024" style="--tl:#F07DB2">
+              <p class="tl-card__date">2024.07.25 – 08.06</p>
+              <h3>첫 ‘TUMGGU(텀꾸)’ 팝업</h3>
+              <p>무신사 스퀘어 성수3. 180가지 이상의 꾸미기 조합을 선보였습니다.</p>
+            </li>
+            <li class="tl-card reveal" data-year="2024" style="--tl:#F4DB86">
+              <p class="tl-card__date">2024.08 – 09.09</p>
+              <h3>잠실 롯데월드몰 텀꾸 팝업</h3>
+              <p>롯데백화점과 함께한 텀꾸 팝업스토어.</p>
+            </li>
+            <li class="tl-card reveal" data-year="2025" style="--tl:#E2443A">
+              <p class="tl-card__date">2025.07.03 – 07.13</p>
+              <h3>“PLAY MY WAY” 팝업</h3>
+              <p>올리브영N 성수. 리뉴얼한 웹사이트와 연동된 3D 커스터마이징 키오스크를 운영했습니다.</p>
+            </li>
+            <li class="tl-card reveal" data-year="2025" style="--tl:#AFD3F4">
+              <p class="tl-card__date">2025.09</p>
+              <h3>싱가포르 다카시마야 프로모션</h3>
+              <p>‘캔디(Candy)’ 컬렉션(텀블러·머그·파우치) 소개.</p>
+            </li>
+            <li class="tl-card reveal" data-year="2025" style="--tl:#C9B8F2">
+              <p class="tl-card__date">2025.11.12 – 11.19</p>
+              <h3>세 번째 일본 팝업</h3>
+              <p>그랜드트리 무사시코스기. 테마 “PLAYCOLOR! My style! Customize For Me!”</p>
+            </li>
+            <li class="tl-card reveal" data-year="2026" style="--tl:#A8E3CF">
+              <p class="tl-card__date">2026.06.08 – 06.24</p>
+              <h3>모듈 텀블러 출시 · 28 파츠</h3>
+              <p>코엑스 파르나스몰 B1 팝업에서 각인 서비스와 함께 선보였습니다. 보도에 따르면 2026년 6월 매출은 전년 대비 약 45% 증가(CJ온스타일 데이터).</p>
+            </li>
+            <li class="tl-card reveal" data-year="2026" style="--tl:#F7E77D">
+              <p class="tl-card__date">2026.07.17 – 07.30</p>
+              <h3>포켓몬 컬렉션 × 29CM</h3>
+              <p>포켓몬 루프 텀블러 모듈 414ml(4컬러), 도시락, 24인치 캐리어, 파우치 키링. 29CM 단독 ‘29 Limited Order’.</p>
+            </li>
+            <li class="tl-card reveal" data-year="2026" style="--tl:#F59C8B">
+              <p class="tl-card__date">2026.10 <span class="tag-unverified">일정 미확인</span></p>
+              <h3>LEGODT × 플러피 팝업</h3>
+              <p>서울 용산에서 열린 협업 팝업. 정확한 기간은 공식 확인이 필요합니다.</p>
+            </li>
+          </ol>
+        </div>
+        <p class="note">그 밖의 협업: 망곰(올리브영 판매 루프 텀블러 멀티 400ml, 시기 미확인). KBO 10개 구단 피규어 텀블러는 레고트가 아닌 오덴세 제품입니다.</p>
+      </div>
+    </section>
+
+    <!-- 8. REVIEWS -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <p class="eyebrow">Loved By You</p>
+        <h2 class="section-title" id="reviews-title">Loved By You</h2>
+        <div class="reviews__grid">
+          <div class="rating reveal">
+            <p class="rating__num"><span class="counter" data-count="4.8" data-decimals="1">4.8</span><span class="rating__of">/ 5</span></p>
+            <p class="rating__meta">무신사 · 루프 텀블러 스탠다드 400ml<br>리뷰 199개 기준 (2026-11-01)</p>
+          </div>
+          <ol class="points">
+            <li class="point reveal"><span class="point__rank">1</span><div><h3>다양한 컬러</h3><p>파스텔부터 뉴트럴, 그라데이션까지 고르는 재미.</p></div></li>
+            <li class="point reveal"><span class="point__rank">2</span><div><h3>알아보기 쉬운 루프 핸들</h3><p>뚜껑의 고리 손잡이로 들고 다니기 편하다는 평가(독립 리뷰, 투웨이 450ml).</p></div></li>
+            <li class="point reveal"><span class="point__rank">3</span><div><h3>커스터마이징</h3><p>슬리브·모듈·액세서리로 바꾸고 꾸미는 텀꾸.</p></div></li>
+          </ol>
+        </div>
+        <figure class="press-quote reveal">
+          <blockquote><p>“완성된 텀블러를 사는 것보다 내가 고른 색과 파츠로 텀블러를 조립하는 게 더 재미있다.”</p></blockquote>
+          <figcaption>— 24세 대학생, 머니투데이 기사(2026-08-07) 인용 내용을 우리말로 요약</figcaption>
+        </figure>
+        <div class="review-split">
+          <div class="review-box reveal">
+            <h3>독립 스펙 리뷰에서 본 장점</h3>
+            <ul>
+              <li>들고 다닐 때 새지 않았음</li>
+              <li>세라믹 코팅 내부로 금속 냄새가 덜함</li>
+              <li>뚜껑 손잡이로 휴대가 편함</li>
+            </ul>
+          </div>
+          <div class="review-box review-box--honest reveal">
+            <h3>솔직하게 알아둘 점</h3>
+            <ul>
+              <li>입구가 좁아 세척 솔 필요, 뚜껑 패킹 분리 불가(투웨이 450ml)</li>
+              <li>완전 방수(누수 방지) 구조가 아님 — 공식 안내</li>
+              <li>손세척 전용, 중국 생산</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">장·단점 출처: 노써치 ‘레고트 투웨이 루프 텀블러 450ml’ 리뷰 &amp; 스펙 분석(종합 76.4점, 16개 중 13위).</p>
+        <ul class="placeholder-quotes" aria-label="고객 리뷰 인용 자리">
+          <li class="ph-quote">[PLACEHOLDER] 실제 고객 리뷰 인용 1 — 승인 후 교체</li>
+          <li class="ph-quote">[PLACEHOLDER] 실제 고객 리뷰 인용 2 — 승인 후 교체</li>
+          <li class="ph-quote">[PLACEHOLDER] 실제 고객 리뷰 인용 3 — 승인 후 교체</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. WHERE TO BUY -->
+    <section class="section buy" id="buy" aria-labelledby="buy-title">
+      <div class="container">
+        <p class="eyebrow eyebrow--ink">Where to Buy</p>
+        <h2 class="section-title section-title--ink" id="buy-title">Find Your LEGODT</h2>
+        <ul class="buy__links">
+          <li><a class="pill-link" href="https://legodt.kr/" target="_blank" rel="noopener">legodt.kr <small>공식 스토어</small></a></li>
+          <li><a class="pill-link" href="https://www.29cm.co.kr/store/brand/25601" target="_blank" rel="noopener">29CM <small>브랜드관</small></a></li>
+          <li><a class="pill-link" href="https://www.musinsa.com/products/4204784" target="_blank" rel="noopener">MUSINSA <small>무신사</small></a></li>
+          <li><a class="pill-link" href="https://www.oliveyoung.co.kr/" target="_blank" rel="noopener">OLIVE YOUNG <small>올리브영</small></a></li>
+          <li><a class="pill-link" href="https://odenseofficial.com/" target="_blank" rel="noopener">ODENSE <small>오덴세 온라인</small></a></li>
+          <li><a class="pill-link" href="https://legodt.jp/" target="_blank" rel="noopener">legodt.jp <small>Japan</small></a></li>
+          <li><a class="pill-link pill-link--ink" href="https://www.instagram.com/legodt.official/" target="_blank" rel="noopener">@legodt.official</a></li>
+          <li><a class="pill-link pill-link--ink" href="https://www.instagram.com/legodt.japan/" target="_blank" rel="noopener">@legodt.japan</a></li>
+        </ul>
+        <p class="buy__note">해외: 일본 한큐 우메다·시부야 모디·그랜드트리 무사시코스기 팝업, 싱가포르 다카시마야. 아마존·쿠팡·네이버 공식 스토어는 확인되지 않았습니다. 외부 링크는 새 창으로 열립니다.</p>
+      </div>
+    </section>
+
+    <!-- 10. CARE / FAQ -->
+    <section class="section care" id="care" aria-labelledby="care-title">
+      <div class="container care__inner">
+        <div>
+          <p class="eyebrow">Care Guide &amp; FAQ</p>
+          <h2 class="section-title" id="care-title">Keep It Fun</h2>
+          <p class="section-lead">공식 상품 안내를 바탕으로 정리했습니다. 구매 전 각 상품 페이지의 최신 안내를 확인하세요.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>식기세척기에 넣어도 되나요?</summary>
+            <p>아니요. 손세척 전용입니다. 식기세척기 사용은 피해 주세요.</p>
+          </details>
+          <details>
+            <summary>끓는 물 소독, 전자레인지, 냉동실은요?</summary>
+            <p>열탕 소독, 전자레인지, 냉동 보관 모두 사용하지 않도록 안내되어 있습니다.</p>
+          </details>
+          <details>
+            <summary>가방에 눕혀서 넣어도 새지 않나요?</summary>
+            <p>공식 안내상 완전 밀폐(누수 방지) 구조가 아닙니다. 세워서 휴대하는 것을 권장합니다.</p>
+          </details>
+          <details>
+            <summary>처음 받으면 무엇을 해야 하나요?</summary>
+            <p>내부는 연마 처리되어 있고 외부는 연마되지 않은 상태로, 제조사는 사용 전 외부 연마(관리)를 권장합니다. 첫 사용 전 깨끗이 세척해 주세요.</p>
+          </details>
+          <details>
+            <summary>보냉·보온은 얼마나 되나요?</summary>
+            <p>모델과 출처마다 다릅니다. 예: 멀티 1000ml 최대 보냉 45시간·보온 5시간(공식 상품 페이지, 제조사 자체 테스트 기준). 일본 팝업 보도자료는 “냉·온 6시간 유지”로 소개합니다. 실제 성능은 사용 환경에 따라 달라집니다.</p>
+          </details>
+          <details>
+            <summary>LEGO와 관련된 브랜드인가요?</summary>
+            <p>아니요. LEGODT(레고트)는 브랜드웍스코리아가 운영하는 한국 라이프스타일 브랜드로, LEGO와는 관계가 없습니다.</p>
+          </details>
+          <details>
+            <summary>어디에서 만들어지나요? 문의는요?</summary>
+            <p>공식 상품 고시 정보 기준 중국 생산입니다. 고객센터: 1833-2623 (공식 스토어 표기).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="footer">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Be Your Playground · Play My Way · Color Your Day · </span><span>Be Your Playground · Play My Way · Color Your Day · </span>
+      </div>
+    </div>
+    <div class="container footer__grid">
+      <div>
+        <p class="footer__logo">LEGODT <span>레고트</span></p>
+        <p>“Be Part of the Fun, Stay Tuned for More Inspiration.”</p>
+        <p class="footer__company">운영사(공식 스토어 표기): 주식회사 브랜드웍스코리아 · 대표 박성배 · 고객센터 1833-2623</p>
+      </div>
+      <div>
+        <h2 class="footer__h">Disclaimer</h2>
+        <p>이 페이지는 학습·팬 목적으로 만든 <strong>비공식 브랜드 소개 페이지</strong>입니다. LEGODT(레고트) 및 브랜드웍스코리아와 제휴·후원 관계가 없으며, LEGO(레고)와도 무관합니다. 공식 로고·제품 사진은 사용하지 않았고, 텀블러 그림은 직접 그린 SVG입니다. 가격·일정·수치는 2026-11-01 기준 공개 자료를 정리한 것으로 바뀔 수 있습니다.</p>
+      </div>
+      <div>
+        <h2 class="footer__h">Image Credits</h2>
+        <ul class="credits">
+          <li>Hero: <a href="https://www.pexels.com/photo/a-person-holding-a-tumbler-7764532/" target="_blank" rel="noopener">RDNE Stock project / Pexels</a> (Pexels License)</li>
+          <li>Story 1: <a href="https://unsplash.com/photos/a-pink-glass-casting-a-shadow-on-a-white-surface-M7MxQliYNEs" target="_blank" rel="noopener">Pavlo / Unsplash</a> (Unsplash License)</li>
+          <li>Story 2: <a href="https://www.pexels.com/photo/a-red-and-blue-tumblers-on-brown-background-8455835/" target="_blank" rel="noopener">RDNE Stock project / Pexels</a> (Pexels License)</li>
+        </ul>
+        <p class="credits__note">사진 속 제품은 LEGODT 제품이 아닌 일반 이미지입니다.</p>
+      </div>
+      <div class="footer__sources">
+        <h2 class="footer__h">Sources</h2>
+        <p>legodt.kr 공식 스토어·상품 페이지, 29CM, 무신사, 다나와, CJ 뉴스룸, 머니투데이(2026-08-07), 라이브뉴스·한경머니(2026-06-08), 더밸류뉴스(2024-07-25), 레이디경향(2025-07-03), 웹이코노미(2024-08-31), San-Tatsu 보도자료(2025-11-05), 노써치, DiveDeals SG, 팝가.</p>
+      </div>
+    </div>
+    <p class="footer__bottom container">© 2026 Unofficial LEGODT intro page (study project). <a href="#top">맨 위로 ↑</a></p>
+  </footer>
+
+  <script src="js/main.js?v=8" defer></script>
+</body>
+</html>

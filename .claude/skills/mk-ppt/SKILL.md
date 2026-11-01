@@ -5,7 +5,7 @@ description: Create PowerPoint (.pptx) presentations in this project with python
 
 # mk-ppt — build .pptx decks with python-pptx
 
-This skill turns content (a topic, the user's notes, or files in `research/` / `report/`) into a clean 16:9 deck. The heavy lifting is done by a bundled script so every deck has the same look and the same Korean-font handling; your job is to plan the story, write a JSON spec, run the script, and check the result.
+This skill turns content (a topic, the user's notes, or files in `output/research/` / `output/report/`) into a clean 16:9 deck. The heavy lifting is done by a bundled script so every deck has the same look and the same Korean-font handling; your job is to plan the story, write a JSON spec, run the script, and check the result.
 
 ## Step 0 — read the PPT rules first
 
@@ -22,7 +22,7 @@ In short: 8 slides by default, follow the user's design file (ask for one if non
 This project has its own rules in `CLAUDE.md`. They take priority, and the important ones for decks are:
 
 - **Todo list first, then wait for approval.** Before building, report the plan: slide outline (title of each slide + its type), source files, output path, and open decisions (theme, slide count, audience). Only build after the user approves.
-- **Save decks in `slides/`.** Never leave a deck in the project root.
+- **Save decks in `output/slides/<task_name>/`** (one folder per deck topic, e.g. `output/slides/ai_development/`; slide images in its `img/`). Always pass `--output output/slides/<task_name>/<file>.pptx`. Never leave a deck in the project root or directly in `output/slides/`.
 - **Never overwrite.** The script automatically appends `_v2`, `_v3`, … if the file exists, so you can always pass the plain name.
 - **Respond in Korean**, and write slide text in Korean unless the user asks otherwise.
 - The JSON spec is a temporary file — write it to the scratchpad directory, not the project.
@@ -35,9 +35,9 @@ This project has its own rules in `CLAUDE.md`. They take priority, and the impor
 4. **Write the spec** (JSON, UTF-8) to the scratchpad.
 5. **Run the script** from the project root:
    ```bash
-   python .claude/skills/mk-ppt/scripts/build_pptx.py <scratchpad>/spec.json
+   python .claude/skills/mk-ppt/scripts/build_pptx.py <scratchpad>/spec.json --output output/slides/<task_name>/<file>.pptx
    ```
-   It saves to `slides/<filename>` (or `--output <path>`), re-opens the file to verify it, and prints one line per slide.
+   With `--output output/slides/<task_name>/<file>.pptx` it saves there (without it, the fallback is `output/slides/<filename>` — avoid), re-opens the file to verify it, and prints one line per slide.
 6. **Check visually — required (ppt-rule-v1 §3).** PowerPoint is installed on this machine, so export every slide to PNG and view it with the Read tool:
    ```powershell
    New-Item -ItemType Directory -Force "<scratchpad>\png" | Out-Null

@@ -2,7 +2,7 @@
 
 Usage (run from anywhere; relative paths resolve against the project root):
     python .claude/skills/mk-ppt/scripts/build_pptx.py spec.json
-    python .claude/skills/mk-ppt/scripts/build_pptx.py spec.json --output slides/my_deck.pptx
+    python .claude/skills/mk-ppt/scripts/build_pptx.py spec.json --output output/slides/my_deck/my_deck.pptx
 
 The output is never overwritten: if the target exists, _v2, _v3, ... is appended.
 See SKILL.md for the spec format.
@@ -23,7 +23,7 @@ from pptx.oxml.ns import qn
 from pptx.util import Emu, Inches, Pt
 
 PROJECT_ROOT = Path(__file__).resolve().parents[4]
-DEFAULT_DIR = PROJECT_ROOT / "slides"
+DEFAULT_DIR = PROJECT_ROOT / "output" / "slides"
 
 SLIDE_W, SLIDE_H = Inches(13.333), Inches(7.5)
 MARGIN = Inches(0.6)
@@ -423,7 +423,7 @@ def unique_path(path):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("spec", help="JSON spec file")
-    ap.add_argument("--output", help="output .pptx (default: slides/<spec 'filename'>)")
+    ap.add_argument("--output", help="output .pptx (use output/slides/<task_name>/<file>.pptx; fallback: output/slides/<spec 'filename'>)")
     args = ap.parse_args()
 
     spec = json.loads(Path(args.spec).read_text(encoding="utf-8"))
