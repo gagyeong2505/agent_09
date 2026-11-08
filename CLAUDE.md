@@ -46,6 +46,7 @@ agent_09/
 │   │   ├── kyobo_economy_p4_book5/  # Kyobo economy books, page 4, book 5
 │   │   ├── legodt/                  # LEGODT (레고트) tumbler brand research for the brand intro web page
 │   │   ├── naver_blog_ai_agent/     # AI agent research for a Naver Blog post
+│   │   ├── notion_api/              # Notion API connection `agent_09` setup log (token in user env var NOTION_API_KEY, never in files)
 │   │   └── suneung_2027/            # 2027 수능 (CSAT, 2026-11-19) D-day research for the blog post
 │   ├── report/    # Final reports as .docx (Korean)
 │   │   └── ai_development/          # AI_발전_보고서.docx (v1, v2)

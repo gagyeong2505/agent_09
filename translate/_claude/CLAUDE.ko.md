@@ -46,6 +46,7 @@ agent_09/
 │   │   ├── kyobo_economy_p4_book5/  # 교보 경제 도서 4페이지 5번째 책
 │   │   ├── legodt/                  # 브랜드 소개 웹 페이지용 LEGODT(레고트) 텀블러 브랜드 자료조사
 │   │   ├── naver_blog_ai_agent/     # 네이버 블로그용 AI 에이전트 자료조사
+│   │   ├── notion_api/              # 노션 API 연결 `agent_09` 설정 기록 (토큰은 사용자 환경 변수 NOTION_API_KEY에만, 파일 저장 금지)
 │   │   └── suneung_2027/            # 블로그용 2027 수능(2026-11-19) D-day 자료조사
 │   ├── report/    # 최종 보고서 .docx (한글)
 │   │   └── ai_development/          # AI_발전_보고서.docx (v1, v2)
